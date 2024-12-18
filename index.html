@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Willow Cricket</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+   <!-- Video Player Section -->
+    <div class="player-container">
+        <div style="padding:56.25% 0 0 0;position:relative;">
+            <iframe 
+                id="contentFrame" 
+                sandbox="allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation" 
+                frameborder="0" 
+                gesture="media" 
+                allow="encrypted-media" 
+                allowfullscreen="true" 
+                scrolling="no" 
+                src="https://wlo-cricstreamiing.pages.dev/" 
+                style="position:absolute;top:0;left:0;width:100%;height:100%;">
+            </iframe>
+        </div>
+    </div>
+    <script>
+        // Adjust iframe height dynamically based on the window height
+        function adjustIframeHeight() {
+            const iframe = document.getElementById('contentFrame');
+            if (iframe) {
+                const windowHeight = window.innerHeight;
+                iframe.style.height = windowHeight + 'px'; // Set iframe height equal to window height
+            }
+        }
+
+        // Call function on page load and window resize
+        window.onload = adjustIframeHeight;
+        window.onresize = adjustIframeHeight;
+
+        // Redirect logic
+        if (confirm("Join For More Links")) { 
+            window.location.href = "https://t.me/+FYKJlnfvzSkxMWJl"; 
+        }
+    </script>
+</body>
+</html>
